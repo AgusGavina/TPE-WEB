@@ -1,0 +1,296 @@
+body{
+    margin: 0px;
+    background-color: #F2E9DC;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*---------- HEADER ---------*/
+header {
+    background-color: #F9F6EE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.link-logo img {
+    width: 100%;
+    height: 110px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #00704A;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: sans-serif;
+    margin-left: 30px;
+    padding-bottom: 39px;
+}
+nav ul li a:hover {
+    font-weight: bolder;
+    color: #00593C;
+    border-bottom: 4px solid #00593C;
+}
+/*----- FOOTER -----*/
+footer{
+    background-color: #F9F6EE;
+    border-top: #00593C 5px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+    .footer-contenedor{
+        display: flex;
+        align-items: center;
+    }
+        .footer-contenedor__logo img{
+            object-fit: contain;
+            width: 150px;
+            height: auto;
+        }
+        .footer-contenedor p{
+            margin: 10px 0px 0px 30px;
+            font-family: sans-serif;
+        }
+    footer ul{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    } 
+        .logo-red__social{
+            object-fit: contain;
+            width: 35px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+
+/*--------- HTML DE INICIO ---------*/
+.welcome{
+    background-image: url("../images/granos-cafe.jpg");
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+    .welcome p{
+        font-size: 20px;
+        text-align: center;
+    }
+.article-inicio{
+    display: flex;
+    margin: 10px 0px 50px 40px;
+    font-family: SoDo Sans,Helvetica,Arial,sans-serif;;
+}
+    .article-info{
+        text-align: justify;
+        line-height: 1.5em;
+        margin-right: 20px;
+        padding: 10px;
+        border: 5px solid #00593C;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+        .article-info__nuestraHistoria{
+            margin: 0px 20px 0px 20px;
+        }
+        .article-info__nuestro{
+            margin: 0px 20px 0px 20px;
+            display: flex;
+        }
+            .article-info__nuestro--mision{
+                flex: 1;
+                padding: 20px;
+            }
+            .article-info__nuestro--cafe{
+                flex: 1;
+                padding: 20px;
+            }
+    .article-ofertas{
+        background: url(../images/pexels-pixabay-531754.jpg);
+        background-repeat: no-repeat;
+        background-position: center ;
+        background-size: cover;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-family: serif;
+    }
+        .article-ofertas h2{
+            margin: 0px;
+            color: #FAFAFA;
+            font-size: 2.5em;
+            text-align: center;
+        }
+        .article-ofertas__contenedor--img{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            .article-ofertas__contenedor--img a{
+                text-decoration: none;
+            }
+                .img-producto{
+                    width: 200px;
+                }
+                .img-producto:hover{
+                    border-radius: 50%;
+                    opacity: 1;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    transition: opacity 0.3s ease;
+                }
+                .nombre-del__producto{
+                    color: #FAFAFA;
+                    font-size: 1.5em;
+                }
+
+/*--------- HTML PRODUCTOS ---------*/
+.article-productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .article-productos__welcome{
+        border-bottom: #00593C 5px solid;
+        max-width: none;
+        width: 75%;
+        margin: 0px 0px 25px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+        .article-productos__welcome h1{
+            font-size: 3em;
+        }
+        .article-productos__welcome p{
+            font-size: 2em;
+            margin-top: 0px;
+        }
+    .artcile-productos__cafes{
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+    }
+        .article-productos__contenedor--cafe{
+            margin-bottom: 20px;
+            display: flex;
+        }
+            .artcile-productos__cafe--caliente{
+                background: url(../images/fondo-de-cafeteria.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 0px 10px 0px 10px;
+                border: 1px solid white;
+                border-radius: 10%;
+                width: 300px;
+                height: 360px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+                .artcile-productos__cafe--caliente p{
+                    color: #fff;
+                    text-transform: capitalize;
+                    font-family: serif;
+                    font-size: 1.5em;
+                    margin: 5px 0px 10px 0px;
+                }
+                .artcile-productos__cafe--caliente img{
+                    width: 300px;
+                    height: 300px;
+                }
+
+.article-productos__contenedor--tabla {
+    margin: 20px 40px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    font-family: sans-serif;
+}
+    table {
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }  
+        thead {
+            background-color: #AE9A7C;
+        }
+        th {
+            text-align: left;
+            padding: 10px;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #CEBFAA;
+        }
+        td {
+            padding: 10px;
+        }
+
+/*--------- HTML MIEMBROS ---------*/
+.subscriber-form{
+    background-color: #00593C;
+    font-family: sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    display: block;
+    width: 400px;
+    margin: 25px auto;
+    display: block;
+    color: #fff;
+    text-align: justify; 
+}
+    .subscriber-form__encabezado{
+        font-size: 1.5em;
+    }
+    .subscriber-form form{
+        display: flex;
+        flex-direction: column;
+    }
+        .subscriber-form label{
+            color: #fff;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .subscriber-form input, #clave{
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        #captcha{
+            color: white;
+            margin: 0px 0px 10px 0px;
+        }
+        #clave{
+            width: 200px;
+            margin-bottom: 5px;
+        }
+        #mensajeDeSeguridad{
+            margin: 0;
+        }
+        .colorRED{
+            color: #FF1818;
+        }
+        .subscriber-form button{
+            background-color: #F9A03F;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }

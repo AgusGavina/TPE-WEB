@@ -73,7 +73,7 @@ footer{
 
 /*--------- HTML DE INICIO ---------*/
 .welcome{
-    background-image: url("../images/granos-cafe.jpg");
+    background-image: url(../img/granos-cafe.jpg);
     background-repeat: no-repeat;
     background-position: center ;
     background-size: cover;
@@ -119,7 +119,7 @@ footer{
                 padding: 20px;
             }
     .article-ofertas{
-        background: url(../images/pexels-pixabay-531754.jpg);
+        background: url(../img/pexels-pixabay-531754.jpg);
         background-repeat: no-repeat;
         background-position: center ;
         background-size: cover;
@@ -191,7 +191,7 @@ footer{
             display: flex;
         }
             .artcile-productos__cafe--caliente{
-                background: url(../images/fondo-de-cafeteria.jpg);
+                background: url(../img/fondo-de-cafeteria.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
                 margin: 0px 10px 0px 10px;

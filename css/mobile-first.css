@@ -5,6 +5,9 @@
   margin: 0;
   padding: 0;
 }
+body{
+  background-color: #CEBFAA;
+}
 
 /*---------- HEADER ----------*/
 header {
@@ -27,8 +30,8 @@ header {
   color: #007a4b;
   font-size: 1.5rem;
 }
-.btn-rotation{
-    transform: rotate(90deg);
+.btn-rotation {
+  transform: rotate(90deg);
 }
 .nav-links {
   display: none;
@@ -38,16 +41,35 @@ header {
   flex-direction: column;
 }
 .nav-link {
-    font-family: "Poppins", serif;
-    list-style: none;
-    margin: 20px 0;
-    border-bottom: 2px solid #00704A;
-    width: 8rem;
-  }
-.nav-link a{
-    color: #00704A;
-    text-transform: capitalize;
-    text-decoration: none;
-    font-size: 1.25em;
-    
+  font-family: "Poppins", serif;
+  list-style: none;
+  margin: 20px 0;
+  border-bottom: 2px solid #00704a;
+  width: 8rem;
+}
+.nav-link a {
+  color: #00704a;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.25em;
+}
+/*--------- HTML DE HOME ---------*/
+.welcome{
+  background-image: url(../img/granos-cafe.jpg);
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-size: cover;
+  font-family: "Poppins", serif;
+  color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%;
+}
+.welcome h1{
+  
+}
+.welcome p{
+  font-size: 1em;
+  text-align: center;
 }

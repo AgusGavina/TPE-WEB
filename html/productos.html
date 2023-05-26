@@ -72,75 +72,34 @@
         <div class="article-productos__contenedor--tabla">
             <table>
                 <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                    </tr>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Agregar</th>
+                  </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Café americano</td>
-                        <td>Café negro fuerte hecho con una sola porción de agua caliente</td>
-                        <td>$2.50</td>
-                    </tr>
-                    <tr>
-                        <td>Café con leche</td>
-                        <td>Café negro mezclado con leche al vapor</td>
-                        <td>$3.50</td>
-                    </tr>
-                    <tr>
-                        <td>Cappuccino</td>
-                        <td>Café negro mezclado con leche al vapor y espuma de leche</td>
-                        <td>$4.00</td>
-                    </tr>
-                    <tr>
-                        <td>Latte</td>
-                        <td>Café negro mezclado con leche al vapor y un poco de espuma de leche</td>
-                        <td>$4.50</td>
-                    </tr>
-                    <tr>
-                        <td>Mocha</td>
-                        <td>Latte con chocolate caliente agregado</td>
-                        <td>$5.00</td>
-                    </tr>
-                    <tr>
-                        <td>Té</td>
-                        <td>Té negro o verde caliente en una taza</td>
-                        <td>$2.50</td>
-                    </tr>
-                    <tr>
-                        <td>Té helado</td>
-                        <td>Té frío con hielo y limón</td>
-                        <td>$3.50</td>
-                    </tr>
-                    <tr>
-                        <td>Sándwich de jamón y queso</td>
-                        <td>Jamón y queso entre dos rebanadas de pan</td>
-                        <td>$6.00</td>
-                    </tr>
-                    <tr>
-                        <td>Bagel de salmón y queso crema</td>
-                        <td>Bagel tostado con queso crema y salmón ahumado</td>
-                        <td>$7.50</td>
-                    </tr>
-                    <tr>
-                        <td>Ensalada de pollo</td>
-                        <td>Lechuga, pollo a la parrilla, tomates, cebollas y aderezo a elección</td>
-                        <td>$8.00</td>
-                    </tr>
-                    <tr>
-                        <td>Pastel de zanahoria</td>
-                        <td>Pastel de zanahoria con glaseado de queso crema</td>
-                        <td>$4.50</td>
-                    </tr>
-                    <tr>
-                        <td>Galleta de chocolate</td>
-                        <td>Galleta grande de chocolate y nueces</td>
-                        <td>$2.00</td>
-                    </tr>
+                <tbody id="tablaProductos">
+                  <!-- Filas de productos se agregarán dinámicamente con JavaScript -->
                 </tbody>
-            </table>
+              </table>
+          
+              <h2>Presupuesto</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Elimiar</th>
+                  </tr>
+                </thead>
+                <tbody id="tablaPresupuesto">
+                  <!-- Filas de productos seleccionados se agregarán dinámicamente con JavaScript -->
+                </tbody>
+              </table>
+              <p>Precio Total: $<span id="total-price"></span></p>
+              <button id="btn-eliminar-todo">Eliminar todo</button>
+              <button id="btn-pres-alet">Presupuesto aleatorio</button>
         </div>
     </div>
     <footer>
@@ -155,5 +114,6 @@
             <li><a href="#"><img src="../images/logo redes sociales/instagram.png" alt="logo instagram" class="logo-red__social"></a></li>
         </ul>
     </footer>
+    <script src="../js/tabla-dinamica.js"></script>
 </body>
 </html>

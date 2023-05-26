@@ -53,6 +53,38 @@ header {
   text-decoration: none;
   font-size: 1.25em;
 }
+/*----------- FOOTER ----------*/
+footer{
+  background-color: #F9F6EE;
+  border-top: #00593C 5px solid;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-contenedor{
+  display: flex;
+  align-items: center;
+}
+.footer-contenedor__logo img{
+    object-fit: contain;
+    width: 150px;
+    height: auto;
+}
+.footer-contenedor p{
+    margin: 10px 0px 0px 30px;
+    font-family: sans-serif;
+}
+footer ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+} 
+.logo-red__social{
+    object-fit: contain;
+    width: 35px;
+    height: auto;
+    margin-right: 20px;
+} 
 /*--------- HTML DE HOME ---------*/
 .welcome{
   background-image: url(../img/granos-cafe.jpg);
@@ -67,9 +99,63 @@ header {
   padding: 10%;
 }
 .welcome h1{
-  
+  font-size: 200%;
 }
 .welcome p{
-  font-size: 1em;
+  font-size: 100%;
   text-align: center;
+}
+.article-inicio{
+  display: flex;
+  text-align: justify;
+  padding: 1em;
+  font-family: SoDo Sans,Helvetica,Arial,sans-serif;;
+  border: 5px solid #00593C;
+  border-radius: 10px;
+}
+.article-inicio__info h2, .article-inicio__info h3{
+  text-align: center;
+}
+/*.article-inicio__info--nuestraHistoria h3{
+  
+}
+.article-inicio__info--nuestraHistoria{
+  
+}*/
+.aside-ofertas{
+  background: url(../img/pexels-pixabay-531754.jpg);
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: serif;
+}
+.aside-ofertas h2{
+  margin: 0px;
+  color: #FAFAFA;
+  font-size: 2.5em;
+  text-align: center;
+}
+.aside-ofertas__contenerdor{
+  display: flex;
+  flex-direction: row;
+}
+.aside-ofertas__contenedor--img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aside-ofertas__contenedor--img a{
+    text-decoration: none;
+}
+.img-producto{
+    width: 100%;
+}
+.nombre-del__producto{
+    color: #FAFAFA;
+    font-size: 1.5em;
 }

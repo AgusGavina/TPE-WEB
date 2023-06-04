@@ -8,29 +8,43 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" id="form-select-product">
-        <label for="productos">Productos</label>
-        <select name="producto" id="list-productos">
-            <option value="0">Cafe</option>
-            <option value="1">Te</option>
-            <option value="2">Postre</option>
-        </select>
-        <input type="number" name="cantidad" min="1" max="5" value="1" onkeydown="return false">
-        <button id="btn-agregar">Agregar</button>
+    <form action="" id="form-reserva" class="reserva-formulario">
+        <div class="reserva-formulario__campo">
+            <label for="nombre">nombre:</label>
+            <input type="text" name="nombre" id="nombre" required>
+        </div>
+        <div class="reserva-formulario__campo">
+            <label for="email">email:</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="reserva-formulario__campo">
+            <label for="cantidad">Numero de personas:</label>
+            <select name="cantidad" id="list-cantidad">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">+4</option>
+            </select>
+        </div>
+        <div class="reserva-formulario__campo">
+            <label for="fecha">Fecha</label>
+            <input type="date" name="fecha" id="fecha" required>
+        </div>
+        <div class="reserva-formulario__campo">
+            <label for="hora">Hora:</label>
+            <input type="time" name="hora" id="hora" required>
+        </div>
+        <div class="reserva-formulario__campo">
+            <label for="validacion">Introduzca el código de seguridad:</label>
+            <p id="captcha"></p>
+            <input id="clave" type="text" name="validacion" required></input>
+            <p id="mensajeDeSeguridad"></p>
+        </div>
+        <div class="reserva-formulario__campo">
+            <button type="submit">Enviar</button>  
+        </div>
     </form>
-    <p>Carrito de compras</p>
-    <table>
-        <thead>
-            <th>
-                <tr>Producto</tr>
-                <tr>Cantidad</tr>
-                <tr>Precio</tr>
-            </th>
-        </thead>
-        <tbody id="tab-productos">
-
-        </tbody>
-    </table>
-    <script src="./js/pedidos.js"></script>
+    <script src="./js/recerva-mesa.js"></script>
 </body>
 </html>

@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7 AM</title>
-    <!-- <link rel="stylesheet" href="../css/styles.css"> -->
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <header>
-      <a href="index.html" class="link-logo"
-        ><img src="./img/logo3.png" alt="logo"
-      /></a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a href="miembros.html">Unitenos</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="welcome">
-      <h1>7AM COFFE</h1>
-      <p>
-        ¡Bienvenido a nuestra página web de café! Somos apasionados por el café
-        y queremos compartir esa pasión contigo. Aquí encontrarás una amplia
-        variedad de sabores y aromas únicos que te transportarán al mundo del
-        café perfectamente preparado. Desde granos de café cultivados en las
-        montañas más altas hasta tazas de café artesanalmente preparadas, cada
-        detalle es importante para nosotros.
-      </p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7AM - Home</title>
+  <link rel="stylesheet" href="./css/header-footer.css">
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="nav-header">
+      <a href="index.html" class="logo-link"><img src="./img/logo3.png" alt="logo" /></a>
+      <button class="btn-nav" id="btn-nav">
+        <i class="fa-solid fa-bars fa-xl"></i>
+      </button>
     </div>
-    <div class="article-inicio">
-      <div class="article-info">
+
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li class="nav-link"><a href="index.html">Home</a></li>
+        <li class="nav-link"><a href="productos.html">Productos</a></li>
+        <li class="nav-link"><a href="reservas.html">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="welcome">
+    <h1>7AM COFFE</h1>
+    <p>
+      ¡Bienvenido a nuestra página web de café! Somos apasionados por el café
+      y queremos compartir esa pasión contigo. Aquí encontrarás una amplia
+      variedad de sabores y aromas únicos que te transportarán al mundo del
+      café perfectamente preparado. Desde granos de café cultivados en las
+      montañas más altas hasta tazas de café artesanalmente preparadas, cada
+      detalle es importante para nosotros.
+    </p>
+  </section>
+  <div class="main">
+    <article class="article-inicio">
+      <section class="article-inicio__info">
         <h2>Sobre nosotros</h2>
-        <div class="article-info__nuestraHistoria">
+        <div class="article-inicio__info--nuestraHistoria">
           <h3>Nuestra historia en Argentina</h3>
           <p>
             En 2005, un grupo de amigos amantes del café y la buena comida se
@@ -54,8 +64,8 @@
             usted nuestra pasión por la gastronomía y el buen café.
           </p>
         </div>
-        <div class="article-info__nuestro">
-          <div class="article-info__nuestro--mision">
+        <div class="article-inicio__info--nuestro">
+          <div class="article-inicio__info--nuestro__mision">
             <h3>Nuestra misión</h3>
             <ul>
               <li>
@@ -82,7 +92,7 @@
               </li>
             </ul>
           </div>
-          <div class="article-info__nuestro--cafe">
+          <div class="article-inicio__info--nuestro__cafe">
             <h3>Nuestro café</h3>
             <p>
               En nuestra cafetería, nos apasiona el café de especialidad y
@@ -99,59 +109,46 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="article-ofertas">
-        <h2>Proba nuestros</h2>
-        <div class="article-ofertas__contenedor--img">
-          <a href="productos.html"
-            ><img
-              src="./img/img productos/americano.png"
-              alt="Americano"
-              class="img-producto"
-          /></a>
-          <a href="productos.html"
-            ><p class="nombre-del__producto">Americanos</p></a
-          >
+      </section>
+    </article>
+    <aside class="aside-ofertas">
+      <h2>Proba nuestros</h2>
+      <div class="aside-ofertas__contenerdor">
+        <div class="aside-ofertas__contenedor--img">
+          <a href="productos.html"><img src="./img/img productos/americano.png" alt="Americano"
+              class="img-producto" /></a>
+          <a href="productos.html">
+            <p class="nombre-del__producto">Americanos</p>
+          </a>
         </div>
-        <div class="article-ofertas__contenedor--img">
-          <a href="productos.html"
-            ><img
-              src="./img/img productos/latte.png"
-              alt="Latte"
-              class="img-producto"
-          /></a>
-          <a href="productos.html"
-            ><p class="nombre-del__producto">Lattes</p></a
-          >
+        <div class="aside-ofertas__contenedor--img">
+          <a href="productos.html"><img src="./img/img productos/latte.png" alt="Latte" class="img-producto" /></a>
+          <a href="productos.html">
+            <p class="nombre-del__producto">Lattes</p>
+          </a>
         </div>
       </div>
+    </aside>
+  </div>
+  <footer>
+    <div class="footer-contenedor">
+      <div class="footer-contenedor__logo">
+        <img src="./img/logo3grande.png" alt="logo" />
+      </div>
+      <p>7 AM Coffe</p>
     </div>
-    <footer>
-      <div class="footer-contenedor">
-        <div class="footer-contenedor__logo">
-          <img src="./img/logo3grande.png" alt="logo" />
-        </div>
-        <p>7 AM Coffe</p>
-      </div>
-      <ul>
-        <li>
-          <a href="#"
-            ><img
-              src="./img/logo redes sociales/facebook.png"
-              alt="logo facebook"
-              class="logo-red__social"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img
-              src="./img/logo redes sociales/instagram.png"
-              alt="logo instagram"
-              class="logo-red__social"
-          /></a>
-        </li>
-      </ul>
-    </footer>
-    <script src="../js/responsive.js"></script>
-  </body>
+    <ul>
+      <li>
+        <a href="#"><img src="./img/logo redes sociales/facebook.png" alt="logo facebook"
+            class="logo-red__social" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="./img/logo redes sociales/instagram.png" alt="logo instagram"
+            class="logo-red__social" /></a>
+      </li>
+    </ul>
+  </footer>
+  <script src="./js/menu-responsive.js"></script>
+</body>
+
 </html>

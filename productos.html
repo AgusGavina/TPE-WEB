@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7 AM - Productos</title>
+  <link rel="stylesheet" href="./css/header-footer.css">
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="nav-header">
+      <a href="index.html" class="logo-link"><img src="./img/logo3.png" alt="logo" /></a>
+      <button class="btn-nav" id="btn-nav">
+        <i class="fa-solid fa-bars fa-xl"></i>
+      </button>
+    </div>
+
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li class="nav-link"><a href="index.html">Home</a></li>
+        <li class="nav-link"><a href="productos.html">Productos</a></li>
+        <li class="nav-link"><a href="reservas.html">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <article class="article-productos">
+    <section class="article-productos__welcome">
+      <h1>Disfrutalos!!</h1>
+      <p>Conoce nuestras bebidas y alimentos de temporada</p>
+    </section>
+    <h2>Nuestros cafes calientes mas consumidos</h2>
+    <section class="artcile-productos__contenedor--cafes">
+      <div class="artcile-productos__cafe">
+        <img src="./img/img productos/americano.png" alt="americano">
+        <p>Americano</p>
+      </div>
+      <div class="artcile-productos__cafe">
+        <img src="./img/img productos/cappuccino.png" alt="Cappuccino">
+        <p>Cappuccino</p>
+      </div>
+      <div class="artcile-productos__cafe">
+        <img src="./img/img productos/caramel macchiato.png" alt="Caramel Macchiato">
+        <p>Caramel Macchiato</p>
+      </div>
+      <div class="artcile-productos__cafe">
+        <img src="./img/img productos/latte.png" alt="Latte">
+        <p>Latte</p>
+      </div>
+      <div class="artcile-productos__cafe">
+        <img src="./img/img productos/cortado.png" alt="Cortado">
+        <p>Cortado</p>
+      </div>
+      <div class="artcile-productos__cafe">
+        <img src="./img/img productos/flat white.png" alt="Flat White">
+        <p>Flat White</p>
+      </div>
+      <div class="artcile-productos__cafe">
+        <img src="./img/img productos/macchiato.png" alt="Macchiato">
+        <p>Macchiato</p>
+      </div>
+      <div class="artcile-productos__cafe">
+        <img src="./img/img productos/mocha.png" alt="Mocha">
+        <p>Mocha</p>
+      </div>
+      <div class="artcile-productos__cafe">
+        <img src="./img/img productos/mocha blanco.png" alt="Mocha Blanco">
+        <p>Mocha Blanco</p>
+      </div>
+    </section>
+    <section class="article-productos__contenedor--tablas">
+      <h2>Tabla de precios</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Agregar</th>
+          </tr>
+        </thead>
+        <tbody id="tablaProductos">
+          <!-- Filas de productos se agregarán dinámicamente con JavaScript -->
+        </tbody>
+      </table>
+
+      <h2>Presupuesto</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Elimiar</th>
+          </tr>
+        </thead>
+        <tbody id="tablaPresupuesto">
+          <!-- Filas de productos seleccionados se agregarán dinámicamente con JavaScript -->
+        </tbody>
+      </table>
+      <p>Precio Total: $<span id="total-price"></span></p>
+      <div class="tablas-botoneras">
+        <button id="btn-eliminar-todo">Eliminar todo</button>
+        <button id="btn-pres-alet">Presupuesto aleatorio</button>
+      </div>
+    </section>
+  </article>
+
+  <footer>
+    <div class="footer-contenedor">
+      <div class="footer-contenedor__logo">
+        <img src="./img/logo3grande.png" alt="logo" />
+      </div>
+      <p>7 AM Coffe</p>
+    </div>
+    <ul>
+      <li>
+        <a href="#"><img src="./img/logo redes sociales/facebook.png" alt="logo facebook"
+            class="logo-red__social" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="./img/logo redes sociales/instagram.png" alt="logo instagram"
+            class="logo-red__social" /></a>
+      </li>
+    </ul>
+  </footer>
+  <script src="./js/menu-responsive.js"></script>
+  <script src="./js/calcular-presupuesto.js"></script>
+</body>
+</html>

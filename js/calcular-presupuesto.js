@@ -93,6 +93,15 @@ let cuenta = 0;
 for (let i = 0; i < productos.length; i++) {
     agregarFilaProducto(i);
 }
+// Bucle for para agregar addEventLister al boton Agregar
+let arregloBotonesAgregar = document.querySelectorAll("#btn-agregar-prod");
+for(let i = 0; i < arregloBotonesAgregar.length; i++){
+    let btnAgregar = arregloBotonesAgregar[i];
+    btnAgregar.addEventListener('click', () => {
+        let valor = btnAgregar.value;
+        agregarAlPresupuesto(valor);
+    });
+}
 // Función para agregar filas de productos a la tabla productos
 function agregarFilaProducto(i) {
     tablaProductos.innerHTML += `
@@ -100,7 +109,7 @@ function agregarFilaProducto(i) {
             <td>${productos[i].nombre}</td>
             <td>${productos[i].descripcion}</td>
             <td>$${productos[i].precio}</td>
-            <td><input type="button" onclick="agregarAlPresupuesto(${i})" value="Agregar"></td>
+            <td><button id="btn-agregar-prod" value="${i}">Agregar</button></td>
         </tr>`;
 }
 // Función del boton agregar
@@ -109,7 +118,7 @@ function agregarAlPresupuesto(i) {
         <tr id="elemento-presupuesto-${i}">
             <td>${productos[i].nombre}</td>
             <td>$${productos[i].precio}</td>
-            <td><input type="button" onclick="eliminarDelPresupuesto(${i})" value="Eliminar"></td>
+            <td><button onclick="eliminarDelPresupuesto(${i})">Eliminar</button></td>
         </tr>`;
     cuenta += productos[i].precio;
     precioTotal.innerHTML = cuenta;
@@ -133,7 +142,7 @@ function precargarTablaPresupuesto() {
         <tr id="elemento-presupuesto-${i}">
             <td>${productos[i].nombre}</td>
             <td>$${productos[i].precio}</td>
-            <td><input type="button" onclick="eliminarDelPresupuesto(${i})" value="Eliminar"></td>
+            <td><button onclick="eliminarDelPresupuesto(${i})">Eliminar</button></td>
         </tr>`;
     cuenta += productos[i].precio;
     precioTotal.innerHTML = cuenta;
@@ -147,7 +156,7 @@ function generarProductosAleatorios() {
                 <tr id="elemento-presupuesto-${posAleatoria}">
                     <td>${productos[posAleatoria].nombre}</td>
                     <td>$${productos[posAleatoria].precio}</td>
-                    <td><input type="button" onclick="eliminarDelPresupuesto(${posAleatoria})" value="Eliminar"></td>
+                    <td><button onclick="eliminarDelPresupuesto(${posAleatoria})">Eliminar</button></td>
                 </tr>`;
         cuenta += productos[posAleatoria].precio;
         precioTotal.innerHTML = cuenta;

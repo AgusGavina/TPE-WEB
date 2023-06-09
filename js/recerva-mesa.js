@@ -3,8 +3,8 @@
 const MAX = 10000;
 const MIN = 1000;
 
-let mensaje = document.querySelector("#mensajeDeSeguridad");
-let captcha = document.querySelector("#captcha");
+let mensaje = document.querySelector("#mensajeDeSeguridad-reserva");
+let captcha = document.querySelector("#captcha-reserva");
 let form = document.querySelector("#form-reserva");
 let tabla = document.querySelector("#tabla-recerva");
 let btnEjemplo = document.querySelector("#btn-ej").addEventListener("click", function () { cargarTablaDinamica(1) });
@@ -41,7 +41,7 @@ function codigoSeguridad() {
 //Funcion para validar lo ingresado por el usuario
 function validar(e) {
     e.preventDefault();
-    let inputClave = document.querySelector("#clave");
+    let inputClave = document.querySelector("#clave-reserva");
     let formData = new FormData(form);
 
     let nombre = formData.get('nombre');
@@ -94,8 +94,8 @@ function tachado(contadorTabla) {
     if (contadorTabla > 0) {
         let ultimaFila = document.querySelector(".tabla-recerva-fila-" + contadorTabla);
         ultimaFila.classList.remove("tachado");
-        let fila = document.querySelector(".tabla-recerva-fila-" + (contadorTabla - 1));
-        fila.classList.add("tachado");
+        let penultimafila = document.querySelector(".tabla-recerva-fila-" + (contadorTabla - 1));
+        penultimafila.classList.add("tachado");
     }
 }
 //Funcion para limpiar tabla de recervas

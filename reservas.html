@@ -21,7 +21,6 @@
                 <i class="fa-solid fa-bars fa-xl"></i>
             </button>
         </div>
-
         <nav class="nav-links" id="nav-links">
             <ul>
                 <li class="nav-link"><a href="index.html">Home</a></li>
@@ -31,91 +30,93 @@
         </nav>
     </header>
 
-    <div class="form-contenedor">
-        <span class="form-encabezado">Reserva tu mesa</span>
-        <form action="" id="form-reserva">
-            <div class="form-campo">
-                <label for="nombre">nombre:</label>
-                <input type="text" name="nombre" id="nombre" required>
-            </div>
-            <div class="form-campo">
-                <label for="email">email:</label>
-                <input type="email" name="email" id="email" required>
-            </div>
-            <div class="form-campo">
-                <label for="cantidad">Numero de personas:</label>
-                <select name="cantidad" id="list-cantidad">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">+4</option>
-                </select>
-            </div>
-            <div class="form-campo">
-                <label for="fecha">Fecha:</label>
-                <input type="date" name="fecha" id="fecha" required>
-            </div>
-            <div class="form-campo">
-                <label for="hora">Hora:</label>
-                <input type="time" name="hora" id="hora" required>
-            </div>
-            <div class="form-campo">
-                <label for="validacion">Introduzca el código de seguridad:</label>
-                <p id="captcha" class="captcha"></p>
-                <input id="clave" type="text" name="validacion" class="clave" required></input>
-                <p id="mensajeDeSeguridad" class="mensajeDeSeguridad"></p>
-            </div>
-            <div class="form-campo">
-                <button type="submit">Enviar</button>
-            </div>
-        </form>
-    </div>
-
-    <div class="tabla-info__reserva--contenedor">
-        <table class="tabla-info__reserva">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Correo Electronico</th>
-                    <th>Cantidad de personas</th>
-                    <th>Dia de recerva</th>
-                    <th>Hora de recerva</th>
-                </tr>
-            </thead>
-            <tbody id="tabla-recerva">
-
-            </tbody>
-        </table>
-        <div class="tablas-botoneras">
-            <button id="btn-ej">Mostrar ejemplo</button>
-            <button id="btn-limpiar">Limpiar</button>
+    <main class="main-reservas">
+        <div class="form-contenedor">
+            <span class="form-encabezado">Reserva tu mesa</span>
+            <form action="" id="form-reserva">
+                <div class="form-campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+                <div class="form-campo">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="form-campo">
+                    <label for="cantidad">Numero de personas:</label>
+                    <select name="cantidad" id="list-cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">+4</option>
+                    </select>
+                </div>
+                <div class="form-campo">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" name="fecha" id="fecha" required>
+                </div>
+                <div class="form-campo">
+                    <label for="hora">Hora:</label>
+                    <input type="time" name="hora" id="hora" required>
+                </div>
+                <div class="form-campo">
+                    <label for="validacion">Introduzca el código de seguridad:</label>
+                    <p id="captcha-reserva" class="captcha"></p>
+                    <input id="clave-reserva" type="text" name="validacion" class="clave" required></input>
+                    <p id="mensajeDeSeguridad-reserva" class="mensajeDeSeguridad"></p>
+                </div>
+                <div class="form-campo">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
         </div>
-    </div>
 
-    <div class="form-contenedor">
-        <span class="form-encabezado">Suscribite al newsletter y enterate de todas las promociones y
-            novedades</span>
-        <form action="" id="form-newsletter">
-            <div class="form-campo">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" required>
+        <div class="tabla-info__reserva--contenedor">
+            <table class="tabla-info__reserva">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo Electronico</th>
+                        <th>Cantidad de personas</th>
+                        <th>Dia de recerva</th>
+                        <th>Hora de recerva</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-recerva">
+
+                </tbody>
+            </table>
+            <div class="tablas-botoneras">
+                <button id="btn-ej">Mostrar ejemplo</button>
+                <button id="btn-limpiar">Limpiar</button>
             </div>
-            <div class="form-campo">
-                <label for="email">Email:</label>
-                <input type="email" name="email" required>
-            </div>
-            <div class="form-campo">
-                <label for="validacion">Introduzca el código de seguridad:</label>
-                <p id="captcha-newsletter" class="captcha"></p>
-                <input id="clave-newsletter" type="text" name="validacion" class="clave" required></input>
-                <p id="mensajeDeSeguridad-newsletter" class="mensajeDeSeguridad"></p>
-            </div>
-            <div class="form-campo">
-                <button type="submit">Suscribirse</button>
-            </div>
-        </form>
-    </div>
+        </div>
+
+        <div class="form-contenedor">
+            <span class="form-encabezado">Suscribite al newsletter y enterate de todas las promociones y
+                novedades</span>
+            <form action="" id="form-newsletter">
+                <div class="form-campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" required>
+                </div>
+                <div class="form-campo">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-campo">
+                    <label for="validacion">Introduzca el código de seguridad:</label>
+                    <p id="captcha-newsletter" class="captcha"></p>
+                    <input id="clave-newsletter" type="text" name="validacion" class="clave" required></input>
+                    <p id="mensajeDeSeguridad-newsletter" class="mensajeDeSeguridad"></p>
+                </div>
+                <div class="form-campo">
+                    <button type="submit">Suscribirse</button>
+                </div>
+            </form>
+        </div>
+    </main>
     <footer>
         <div class="footer-contenedor">
             <div class="footer-contenedor__logo">

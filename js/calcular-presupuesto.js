@@ -89,20 +89,23 @@ const botonGenerarPresupuestoAleatorio = document.querySelector("#btn-pres-alet"
 let precioTotal = document.querySelector("#total-price");
 let cuenta = 0;
 
-// Bucle for para cargar la tabla de productos
-for (let i = 0; i < productos.length; i++) {
-    agregarFilaProducto(i);
+// Funcion para cargar las tabla de productos
+function cargarTablaProductos(){
+    // Bucle for para cargar las filas de la tabla de productos
+    for (let i = 0; i < productos.length; i++) {
+        agregarFilaProducto(i);
+    }
+    let arregloBotonesAgregar = document.querySelectorAll("#btn-agregar-prod");
+    // Bucle for para agregar addEventLister los botones Agregar
+    for(let i = 0; i < arregloBotonesAgregar.length; i++){
+        let btnAgregar = arregloBotonesAgregar[i];
+        btnAgregar.addEventListener('click', () => {
+            let valor = btnAgregar.value;
+            agregarAlPresupuesto(valor);
+        });
+    }
 }
-// Bucle for para agregar addEventLister al boton Agregar
-let arregloBotonesAgregar = document.querySelectorAll("#btn-agregar-prod");
-for(let i = 0; i < arregloBotonesAgregar.length; i++){
-    let btnAgregar = arregloBotonesAgregar[i];
-    btnAgregar.addEventListener('click', () => {
-        let valor = btnAgregar.value;
-        agregarAlPresupuesto(valor);
-    });
-}
-// Función para agregar filas de productos a la tabla productos
+// Función para agregar fila de producto a la tabla productos
 function agregarFilaProducto(i) {
     tablaProductos.innerHTML += `
         <tr>
@@ -118,15 +121,8 @@ function agregarAlPresupuesto(i) {
         <tr id="elemento-presupuesto-${i}">
             <td>${productos[i].nombre}</td>
             <td>$${productos[i].precio}</td>
-            <td><button onclick="eliminarDelPresupuesto(${i})">Eliminar</button></td>
         </tr>`;
     cuenta += productos[i].precio;
-    precioTotal.innerHTML = cuenta;
-}
-// Función del boton eliminar
-function eliminarDelPresupuesto(i) {
-    let eliminarFilaPresupuesto = document.querySelector("#elemento-presupuesto-" + i).remove();
-    cuenta -= productos[i].precio;
     precioTotal.innerHTML = cuenta;
 }
 // Función del boton eliminar todo
@@ -138,29 +134,16 @@ function eliminarTodoDelPresupuesto() {
 // Función para precargar la tabla presupuesto
 function precargarTablaPresupuesto() {
     let i = 0;
-    tablaPresupuesto.innerHTML += `
-        <tr id="elemento-presupuesto-${i}">
-            <td>${productos[i].nombre}</td>
-            <td>$${productos[i].precio}</td>
-            <td><button onclick="eliminarDelPresupuesto(${i})">Eliminar</button></td>
-        </tr>`;
-    cuenta += productos[i].precio;
-    precioTotal.innerHTML = cuenta;
+    agregarAlPresupuesto(i);
 }
 // Función generar 3 items aleatorios
 function generarProductosAleatorios() {
     eliminarTodoDelPresupuesto();
     for (let i = 0; i < 3; i++) {
         let posAleatoria = Math.floor(Math.random() * productos.length);
-        tablaPresupuesto.innerHTML += `
-                <tr id="elemento-presupuesto-${posAleatoria}">
-                    <td>${productos[posAleatoria].nombre}</td>
-                    <td>$${productos[posAleatoria].precio}</td>
-                    <td><button onclick="eliminarDelPresupuesto(${posAleatoria})">Eliminar</button></td>
-                </tr>`;
-        cuenta += productos[posAleatoria].precio;
-        precioTotal.innerHTML = cuenta;
+        agregarAlPresupuesto(posAleatoria);
     }
 }
 
+cargarTablaProductos();
 precargarTablaPresupuesto();

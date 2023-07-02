@@ -51,6 +51,7 @@ let infoReserva = [
 formNewsletter.addEventListener("submit", validarNewsletter);
 
 // ------ Funciones de reservas.html -----
+
 // Funcion para generar un codigo para el formulario de reservar mesa
 function codigoSeguridadReserva() {
     segurityCodeReserva = Math.floor((Math.random() * (MAX - MIN) + MIN));
@@ -126,6 +127,7 @@ function tachado(contadorTabla) {
 function limpiarTabla() {
     tabla.innerHTML = "";
     contadorTabla = 0;
+    seEjecutoEjemplos = false;
 }
 // Funcion para mostrar ejemplos en la tabla sin el tachado
 function mostrarEjemplos(){
@@ -143,8 +145,6 @@ function mostrarEjemplos(){
         seEjecutoEjemplos = true;
     }
 }
-// Funcion declarar variables 
-
 // Funcion para generar un codigo para el formulario newsletter
 function codigoSeguridadNewsletter() {
     segurityCodeNewsletter = Math.floor((Math.random() * (MAX - MIN) + MIN));
